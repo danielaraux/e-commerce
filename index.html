@@ -10,32 +10,62 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body class="">
+<body class="d-flex flex-column min-vh-100">
 
     <header>
-
-
-
-        <div class="">
-            <img src="img/logo.jpg" alt="Logo du site">
+        <div class="logo-site text-center">
+            <img src="assets/img/logo-2jpg.jpg" style="height: 10rem;" alt="Logo du site">
         </div>
 
+
         <nav>
-
-
-
+            <div class="navbar-1">
+                <a class="" href="#">Accueil</a>
+                <a class="" href="#">Catégorie 1</a>
+                <a class="" href="#">Catégorie 2</a>
+                <a class="" href="#">Catégorie 3</a>
+                <a class="" href="#">Contact</a>
+                <a class="" href="#">Panier</a>
+            </div>
         </nav>
     </header>
 
-
-
     <main>
+        <div class="main-div border border-5 border-warning">
+
+            <!-- Carousel -->
+            <div id="carouselautoplay" class="carousel slide border border-5 border-danger" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="assets/img/lego/lego_rose/fleurs-roses.png" class="d-block w-100"
+                            alt="image lego rose 2">
+                    </div>
 
 
+                    <div class="carousel-item">
+                        <img src="assets/img/plaid/plaid_pkmn1.png" class="d-block w-100" alt="lego-rose-1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/poster/poster_bepop2.png" class="d-block w-100" alt="lego-rose-3">
+                    </div>
+                </div>
 
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselautoplay"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon border border-5 border-danger" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselautoplay"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon border border-5 border-danger" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
     </main>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
