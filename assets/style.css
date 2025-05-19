@@ -1,5 +1,6 @@
 body {
   border: 5px solid green;
+  background-color: #BCA4BF;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,14 +25,12 @@ nav {
 }
 
 .main-div {
-  width: 80%;
   border: 10px solid blue;
 }
 
 main {
+  width: 80%;
   border: 5px solid red;
-  display: flex;
-  justify-content: center;
   background-color: #048fc8;
 }
 
