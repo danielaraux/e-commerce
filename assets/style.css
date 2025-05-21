@@ -4,6 +4,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.btn-send {
+  background-color: #78A658;
+  color: white;
+}
+
 .logo-site {
   background-color: #c8aecb;
   width: 100%;
@@ -12,11 +17,31 @@ body {
 main {
   width: 80%;
   background-color: #048fc8;
+  border: 1px solid #048fc8;
+  border-radius: 1em;
+}
+
+.main-contact {
+  background-color: #fcfcfa;
 }
 
 .navbar {
   background-color: #78A658;
   border-radius: 0.5em;
+}
+@media (max-width: 414px) {
+  .navbar {
+    background-color: #c8aecb;
+  }
+}
+
+.navdiv {
+  width: 50vw;
+}
+@media (max-width: 414px) {
+  .navdiv {
+    width: 100vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
