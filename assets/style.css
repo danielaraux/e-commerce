@@ -18,5 +18,9 @@ main {
   background-color: #78A658;
   border-radius: 0.5em;
 }
+.imgpanier {
+  width: 25%;
+  height: auto;
+}
 
 /*# sourceMappingURL=style.css.map */
