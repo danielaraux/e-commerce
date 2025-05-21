@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link cdn boostrap pour les icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>exo-e-commerce</title>
 
     <!-- link bootstrap -->
@@ -15,44 +18,236 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <header>
-        <div class="logo-site text-center">
-            <img src="assets/img/logo-2jpg.jpg" style="height: 15rem;" alt="Logo du site">
-        </div>
 
-        <!-- Div pour la barre de nav -->
-        <nav class="navbar navbar-expand-lg mb-4">
+    <!-- Modal ajouter panier-->
+    <div class="modal fade" id="paniermodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Bravo!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Un joli cadeau pour maman a été ajouté au panier!
+                </div>
 
-            <!-- couleur barre de nav -->
-            <div class="container-fluid border border-2 bg-warning w-50">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Catégorie 1</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Catégorie 2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Catégorie 3</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Panier</a>
-                        </li>
-                    </ul>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
 
                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal detail produit poster ronflex-->
+    <div class="modal fade" id="detailronflexmodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Poster Ronflex</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/poster/Ronflex/poster_ronflex1.png" class="card-img-top img-fluid"
+                        alt="poster ronflex 1">
+                    <p class="product-name">Poster Ronflex</p>
+                    <p class="product-details">32 x 45 cm PRINT </p>
+                    <p class="product-extra">Printed on 200 gsm FSC certified, fine art silk card. 8mm border for
+                        framing
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal detail produit lego rose-->
+    <div class="modal fade" id="detailrosemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Set Lego Rose</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/lego/lego_rose/rose_1.png" class="card-img-top img-fluid" alt="lego rose">
+                    <h5 class="product-price text-left">Prix xx$</h5>
+                    <p class="product-name">Set Lego Rose</p>
+                    <p class="product-details">822 pièces</p>
+                    <p class="product-extra">Un bouquet à construire pour décorer votre intérieur – Faites-vous plaisir
+                        ou savourez un projet de construction immersif avec vos amis et vos proches grâce au set LEGO®
+                        Botanicals Le bouquet de roses pour adultes
+                    <div class="d-flex flex-row  ">
+                        <img src="assets/img/lego/lego_rose/rose_3.png"
+                            class="img-icon object-fit-countain border rounded" alt="">
+                        <img src="assets/img/lego/lego_rose/rose_2.png"
+                            class="img-icon object-fit-countain border rounded" alt="">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary align-self-right btn-sm mx-2" data-bs-toggle="modal"
+                        data-bs-target="#paniermodal">
+                        Ajouter au panier
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retour</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal detail produit lego orchidee-->
+    <div class="modal fade" id="detailorchideemodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Set Lego Orchidée</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/lego/lego_orchidee/orchidee_2.png" class="card-img-top img-fluid"
+                        alt="poster ronflex 1">
+                    <p class="product-name">Set Lego Orchidée</p>
+                    <p class="product-details">608 pièces</p>
+                    <p class="product-extra">Un bouquet à construire pour décorer votre intérieur – Faites-vous plaisir
+                        ou savourez un projet de construction immersif avec vos amis et vos proches grâce au set LEGO®
+                        Botanicals Le bouquet d'orchidée pour adultes
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal detail produit poster cowboy bepop-->
+    <div class="modal fade" id="detailbepopmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Poster Cowboy Bepop</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/poster/Cowboybepop/poster_bepop2.png" class="card-img-top img-fluid"
+                        alt="poster ronflex 1">
+                    <p class="product-name">Poster Cowboy Bepop</p>
+                    <p class="product-details">32 x 45 cm Print</p>
+                    <p class="product-extra">Printed on 200 gsm FSC certified, fine art silk card. 8mm border for
+                        framing
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal detail produit plaid grogu-->
+    <div class="modal fade" id="detailswmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Plaid Star Wars - Grogu</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/plaid/plaid_SW1.png" class="card-img-top img-fluid" alt="poster ronflex 1">
+                    <p class="product-name">Plaid Star Wars - Grogu</p>
+                    <p class="product-details">150 x 130 cm</p>
+                    <p class="product-extra">
+                        Tissage résistant et doux à la fois, anti-bouloches.
+                        Matière : polyester tissé & molletonné,
+                        Lavable en machine à 30° (cycle délicat).
+                        Ne pas repasser
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal detail produit plaid grogu-->
+    <div class="modal fade" id="detailpkmnmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Plaid Pokemon - Evolition</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/plaid/plaid_pkmn1.png" class="card-img-top img-fluid" alt="poster ronflex 1">
+                    <p class="product-name">Plaid Pokemon - Evolition</p>
+                    <p class="product-details">150 x 130 cm</p>
+                    <p class="product-extra">
+                        Tissage résistant et doux à la fois, anti-bouloches.
+                        Matière : polyester tissé & molletonné,
+                        Lavable en machine à 30° (cycle délicat).
+                        Ne pas repasser
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header>
+        <div class="logo-site text-center">
+            <img src="assets/img/logo.jpg" alt="Logo du site">
+        </div>
+
+
+
+        <!-- Div pour la barre de nav -->
+        <nav class="navbar navbar-expand-lg">
+
+            <button class="navbar-toggler ms-3 border border-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse fs-4" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active px-4" aria-current="page" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-4" aria-current="page" href="#">Legos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-4" aria-current="page" href="#">Posters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-4" aria-current="page" href="#">Plaids</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-4" aria-current="page" href="#">Panier</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -61,10 +256,10 @@
 
     <!-- Class main -->
     <main class="mx-auto">
-        <div class="main-div border border-5 border-warning">
+        <div class="main-div">
 
             <!-- Carousel -->
-            <div id="carouselautoplay" class="carousel slide border border-5 border-danger" data-bs-ride="carousel">
+            <div id="carouselautoplay" class="carousel slide mb-3" data-bs-ride="carousel">
                 <div class="carousel-inner">
 
                     <div class="carousel-item active">
@@ -97,106 +292,166 @@
         </div>
 
 
-        <!-- Div pour la mise en place des 3 premiers articles -->
-        <div class="d-flex flex-md-row flex-column vw-80 justify-content-md-evenly mt-5 mb-5">
+        <!-- cards produits -->
+        <div class="d-flex flex-column flex-sm-row vw-80 justify-content-evenly">
 
-            <!-- 1 -->
-            <card class="col-3 card py-3 mb-2 bg-dark-subtle border-dark align-self-center">
-                <h5 class="card-title text-center">Poster Ronflex</h5>
-                <img src="assets/img/poster/Ronflex/poster_ronflex2.PNG" class="card-img-top img-fluid"
-                    alt="poster ronflex 2">
-                <div class="card-body">
-                    <h5 class="product-price text-left">Prix xx$</h5>
-                    <p class="product-name">Poster Ronflex</p>
-                    <p class="product-details">32 x 45 cm PRINT </p>
-                    <p class="product-extra">Printed on 200 gsm FSC certified, fine art silk card. 8mm border for
-                        framing</p>
-                </div>
-            </card>
+            <!-- cards produits lego 1 -->
+            <card class="card col-md-3 col-11 p-3 mb-2 mt-2 bg-dark-subtle align-self-center">
 
-            <!-- 2 -->
-            <card class="col-3 card py-3 mb-2 bg-dark-subtle border-dark align-self-center">
-                <h5 class="card-title text-center">Poster Ronflex</h5>
-                <img src="assets/img/poster/Ronflex/poster_ronflex2.PNG" class="card-img-top img-fluid"
-                    alt="poster ronflex 2">
+                <img src="assets/img/lego/lego_rose/rose_2.png" class="card-img-top img-fluid" role="button"
+                    data-bs-toggle="modal" data-bs-target="#detailrosemodal" alt="poster ronflex 2">
                 <div class="card-body">
+                    <p class="product-name">Set Lego Rose</p>
                     <h5 class="product-price text-left">Prix xx$</h5>
-                    <p class="product-name">Poster Ronflex</p>
-                    <p class="product-details">32 x 45 cm PRINT </p>
-                    <p class="product-extra">Printed on 200 gsm FSC certified, fine art silk card. 8mm border for
-                        framing
+                    <p class="product-details">Lego collection fleurale - Rose</p>
                     </p>
                 </div>
+                <div class="icon mb-2">
+                    <i class="bi bi-heart-fill ms-3"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-fill ms-1"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-half ms-1"></i>
+                </div>
+                <div class="d-grid gap-1 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary align-self-right btn-sm mx-2" data-bs-toggle="modal"
+                        data-bs-target="#paniermodal">
+                        Ajouter au panier
+                    </button>
+                </div>
             </card>
 
-            <!-- 3 -->
-            <card class="col-3 card py-3 mb-2 bg-dark-subtle border-dark align-self-center">
-                <h5 class="card-title text-center">Poster Ronflex</h5>
-                <img src="assets/img/poster/Ronflex/poster_ronflex2.PNG" class="card-img-top img-fluid"
-                    alt="poster ronflex 2">
+
+            <!-- cards produits lego 2 -->
+            <card class="card col-md-3 col-11 p-3 mb-2 bg-dark-subtle align-self-center">
+
+                <img src="assets/img/lego/lego_orchidee/orchidee_4.png" class="card-img-top img-fluid" role="button"
+                    data-bs-toggle="modal" data-bs-target="#detailorchideemodal" alt="poster ronflex 2">
                 <div class="card-body">
+                    <p class="product-name">Set Lego Orchidée</p>
                     <h5 class="product-price text-left">Prix xx$</h5>
-                    <p class="product-name">Poster Ronflex</p>
-                    <p class="product-details">32 x 45 cm PRINT </p>
-                    <p class="product-extra">Printed on 200 gsm FSC certified, fine art silk card. 8mm border for
-                        framing</p>
+                    <p class="product-details">Lego collection fleurale - Orchidée</p>
+                    </p>
+                </div>
+                <div class="icon mb-2">
+                    <i class="bi bi-heart-fill ms-3"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-fill ms-1"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-half ms-1"></i>
+                </div>
+                <div class="d-grid gap-1 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary align-self-right btn-sm mx-2" data-bs-toggle="modal"
+                        data-bs-target="#paniermodal">
+                        Ajouter au panier
+                    </button>
+                </div>
+            </card>
+
+
+            <!-- cards produits plaid grogu -->
+            <card class="card col-md-3 col-11 p-3 mb-2 bg-dark-subtle align-self-center">
+
+                <img src="assets/img/plaid/plaid_SW2.png" class="card-img-top img-fluid" role="button"
+                    data-bs-toggle="modal" data-bs-target="#detailswmodal" alt="plaid Grogu">
+                <div class="card-body">
+                    <p class="product-name">Plaid Star Wars - Grogu</p>
+                    <h5 class="product-price text-left">Prix xx$</h5>
+
+                    <p class="product-details">Plaid Star Wars - Grogu 150 x 130 cm</p>
+                    </p>
+                </div>
+                <div class="icon mb-2">
+                    <i class="bi bi-heart-fill ms-3"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-fill ms-1"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-half ms-1"></i>
+                </div>
+                <div class="d-grid gap-1 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary align-self-right btn-sm mx-2" data-bs-toggle="modal"
+                        data-bs-target="#paniermodal">
+                        Ajouter au panier
+                    </button>
                 </div>
             </card>
 
         </div>
 
-        <!-- Div pour la mise en place des 3 derniers articles -->
-        <div class="d-flex flex-md-row flex-column vw-80 justify-content-md-evenly mt-5 mb-5">
+        <div class="d-flex flex-column flex-sm-row vw-80 justify-content-md-evenly  m-0">
 
-            <!-- 4 -->
-            <card class="col-3 card py-3 mb-2 bg-dark-subtle border-dark align-self-center">
-                <h5 class="card-title text-center">Poster Ronflex</h5>
-                <img src="assets/img/poster/Ronflex/poster_ronflex2.PNG" class="card-img-top img-fluid"
-                    alt="poster ronflex 2">
-                <div class="card-body">
-                    <h5 class="product-price text-left">Prix xx$</h5>
-                    <p class="product-name">Poster Ronflex</p>
-                    <p class="product-details">32 x 45 cm PRINT </p>
-                    <p class="product-extra">Printed on 200 gsm FSC certified, fine art silk card. 8mm border for
-                        framing</p>
-                </div>
-            </card>
 
-            <!-- 5 -->
-            <card class="col-3 card py-3 mb-2 bg-dark-subtle border-dark align-self-center">
-                <h5 class="card-title text-center">Poster Ronflex</h5>
-                <img src="assets/img/poster/Ronflex/poster_ronflex2.PNG" class="card-img-top img-fluid"
-                    alt="poster ronflex 2">
+            <!-- cards produits poster bepop -->
+            <card class="card col-md-3 col-11 p-3 mb-2 bg-dark-subtle align-self-center">
+
+                <img src="assets/img/poster/Cowboybepop/poster_bepop1.PNG" class="card-img-top img-fluid" role="button"
+                    data-bs-toggle="modal" data-bs-target="#detailbepopmodal" alt="poster Comboy Bepop">
                 <div class="card-body">
+                    <p class="product-name">Poster Comboy Bepop</p>
                     <h5 class="product-price text-left">Prix xx$</h5>
-                    <p class="product-name">Poster Ronflex</p>
                     <p class="product-details">32 x 45 cm PRINT </p>
-                    <p class="product-extra">Printed on 200 gsm FSC certified, fine art silk card. 8mm border for
-                        framing
                     </p>
                 </div>
-            </card>
-
-            <!-- 6 -->
-            <card class="col-3 card py-3 mb-2 bg-dark-subtle border-dark align-self-center">
-                <h5 class="card-title text-center">Poster Ronflex</h5>
-                <img src="assets/img/poster/Ronflex/poster_ronflex2.PNG" class="card-img-top img-fluid"
-                    alt="poster ronflex 2">
-                <div class="card-body">
-                    <h5 class="product-price text-left">Prix xx$</h5>
-                    <p class="product-name">Poster Ronflex</p>
-                    <p class="product-details">32 x 45 cm PRINT </p>
-                    <p class="product-extra">Printed on 200 gsm FSC certified, fine art silk card. 8mm border for
-                        framing
-                    </p>
+                <div class="icon mb-2">
+                    <i class="bi bi-heart-fill ms-3"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-fill ms-1"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-half ms-1"></i>
+                </div>
+                <div class="d-grid gap-1 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary align-self-right btn-sm mx-2" data-bs-toggle="modal"
+                        data-bs-target="#paniermodal">
+                        Ajouter au panier
+                    </button>
                 </div>
             </card>
+
+
+            <!-- cards produits poster ronflex -->
+            <card class="card col-md-3 col-11 p-3 mb-2 bg-dark-subtle align-self-center">
+
+                <img src="assets/img/poster/Ronflex/poster_ronflex2.PNG" class="card-img-top img-fluid" role="button"
+                    data-bs-toggle="modal" data-bs-target="#detailronflexmodal" alt="poster ronflex 2">
+                <div class="card-body">
+                    <p class="product-name">Poster Ronflex</p>
+                    <h5 class="product-price text-left">Prix xx$</h5>
+                    <p class="product-details">32 x 45 cm PRINT </p>
+                    </p>
+                </div>
+                <div class="icon mb-2">
+                    <i class="bi bi-heart-fill ms-3"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-fill ms-1"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-half ms-1"></i>
+                </div>
+                <div class="d-grid gap-1 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary align-self-right btn-sm mx-2" data-bs-toggle="modal"
+                        data-bs-target="#paniermodal">
+                        Ajouter au panier
+                    </button>
+                </div>
+            </card>
+
+
+            <!-- cards produits plaid eevee -->
+            <card class="card col-md-3 col-11 p-3 mb-2 bg-dark-subtle align-self-center">
+
+                <img src="assets/img/plaid/plaid_pkmn2.png" class="card-img-top img-fluid" role="button"
+                    data-bs-toggle="modal" data-bs-target="#detailpkmnmodal" alt="plaid Evolition">
+                <div class="card-body">
+                    <p class="product-name">Plaid Pokemon</p>
+                    <h5 class="product-price text-left">Prix xx$</h5>
+
+                    <p class="product-details">Plaid Pokemon - Evolition</p>
+                    </p>
+                </div>
+                <div class="icon mb-2">
+                    <i class="bi bi-heart-fill ms-3"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-fill ms-1"></i><i class="bi bi-heart-fill ms-1"></i><i
+                        class="bi bi-heart-half ms-1"></i>
+                </div>
+                <div class="d-grid gap-1 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary align-self-right btn-sm mx-2" data-bs-toggle="modal"
+                        data-bs-target="#paniermodal">
+                        Ajouter au panier
+                    </button>
+                </div>
 
         </div>
 
     </main>
-
-
 
 
     <!-- Mise en place du footer et centrage -->
