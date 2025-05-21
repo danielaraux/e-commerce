@@ -15,7 +15,7 @@
 
     <!-- Modal ajouter panier-->
     <div class="modal fade" id="paniermodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Bravo!</h1>
@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
 
                 </div>
             </div>
@@ -65,7 +65,7 @@
 
 
     <div class="modal fade" id="detailrosemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog  modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Set Lego Rose</h1>
@@ -73,16 +73,25 @@
                 </div>
                 <div class="modal-body">
                     <img src="assets/img/lego/lego_rose/rose_1.png" class="card-img-top img-fluid"
-                        alt="poster ronflex 1">
+                        alt="lego rose">
+                    <h5 class="product-price text-left">Prix xx$</h5>
                     <p class="product-name">Set Lego Rose</p>
                     <p class="product-details">822 pièces</p>
                     <p class="product-extra">Un bouquet à construire pour décorer votre intérieur – Faites-vous plaisir
                         ou savourez un projet de construction immersif avec vos amis et vos proches grâce au set LEGO®
                         Botanicals Le bouquet de roses pour adultes
+                    <div class="d-flex flex-row  ">
+                        <img src="assets/img/lego/lego_rose/rose_3.png" class="img-icon object-fit-countain border rounded" alt="">
+                        <img src="assets/img/lego/lego_rose/rose_2.png" class="img-icon object-fit-countain border rounded" alt="">
+                    </div>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary align-self-right btn-sm mx-2" data-bs-toggle="modal"
+                        data-bs-target="#paniermodal">
+                        Ajouter au panier
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retour</button>
 
                 </div>
             </div>
@@ -209,7 +218,7 @@
 
         <!-- cards produits lego 1 -->
 
-        <card class="card col-3 py-3 mb-2 bg-dark-subtle align-self-center">
+        <card class="card col-md-3 col-10  p-2 mb-2 bg-dark-subtle align-self-center">
 
             <img src="assets/img/lego/lego_rose/rose_2.png" class="card-img-top img-fluid" role="button"
                 data-bs-toggle="modal" data-bs-target="#detailrosemodal" alt="poster ronflex 2">
@@ -234,7 +243,7 @@
 
         <!-- cards produits lego 2 -->
 
-        <card class="card col-3 py-3 mb-2 bg-dark-subtle align-self-center">
+        <card class="card col-md-3 col-10 p-2 mb-2 bg-dark-subtle align-self-center">
 
             <img src="assets/img/lego/lego_orchidee/orchidee_1.png" class="card-img-top img-fluid" role="button"
                 data-bs-toggle="modal" data-bs-target="#detailorchideemodal" alt="poster ronflex 2">
@@ -259,7 +268,7 @@
 
         <!-- cards produit poster ronflex -->
 
-        <card class="card col-3 py-3 mb-2 bg-dark-subtle align-self-center">
+        <card class="card col-md-3 col-10  p-2 mb-2 bg-dark-subtle align-self-center">
 
             <img src="assets/img/poster/Ronflex/poster_ronflex2.PNG" class="card-img-top img-fluid" role="button"
                 data-bs-toggle="modal" data-bs-target="#detailronflexmodal" alt="poster ronflex 2">
@@ -286,7 +295,7 @@
 
     <div class="d-flex flex-column flex-sm-row vw-80 justify-content-md-evenly  m-0">
         <!-- cards produits poster bepop -->
-        <card class="card col-3 py-3 mb-2 bg-dark-subtle align-self-center">
+        <card class="card col-md-3 col-10  p-2 mb-2 bg-dark-subtle align-self-center">
 
             <img src="assets/img/poster/Cowboybepop/poster_bepop1.PNG" class="card-img-top img-fluid" role="button"
                 data-bs-toggle="modal" data-bs-target="#detailbepopmodal" alt="poster Comboy Bepop">
@@ -311,7 +320,7 @@
 
         <!-- cards produits plaid pikachu -->
 
-        <card class="card col-3 py-3 mb-2 bg-dark-subtle align-self-center">
+        <card class="card col-md-3 col-10  p-2 mb-2 bg-dark-subtle align-self-center">
 
             <img src="assets/img/plaid/plaid_SW2.png" class="card-img-top img-fluid" role="button"
                 data-bs-toggle="modal" data-bs-target="#detailswmodal" alt="plaid Grogu">
@@ -330,7 +339,7 @@
         </card>
 
         <!-- cards produits plaid eevee -->
-        <card class="card col-3 py-3 mb-2 bg-dark-subtle align-self-center">
+        <card class="card col-md-3 col-10  p-2 mb-2 bg-dark-subtle align-self-center">
 
             <img src="assets/img/plaid/plaid_pkmn2.png" class="card-img-top img-fluid" role="button"
                 data-bs-toggle="modal" data-bs-target="#detailpkmnmodal" alt="plaid Evolition">
