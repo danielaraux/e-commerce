@@ -1,0 +1,72 @@
+body {
+  background-color: #c8aecb;
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn-send {
+  background-color: #78A658;
+  color: white;
+}
+
+.logo-site {
+  background-color: #c8aecb;
+  width: 100%;
+}
+
+main {
+  width: 80%;
+  background-color: #048fc8;
+  border-radius: 1em;
+}
+
+.main-contact {
+  background-color: #fcfcfa;
+}
+
+.navbar {
+  background-color: #78A658;
+  border-radius: 0.5em;
+}
+@media (max-width: 414px) {
+  .navbar {
+    background-color: #c8aecb;
+  }
+}
+
+.navdiv {
+  width: 50vw;
+}
+@media (max-width: 414px) {
+  .navdiv {
+    width: 100vw;
+  }
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.btn-panier > a {
+  text-decoration: none;
+  color: black;
+}
+
+.img-icon {
+  width: 25%;
+  height: auto;
+}
+
+.imgpanier {
+  width: 15em;
+  height: auto;
+}
+
+.titre-panier {
+  background-color: #F2CA52;
+  width: 15em;
+  border-radius: 0.5em;
+}
+
+/*# sourceMappingURL=style.css.map */
