@@ -89,39 +89,59 @@
                 </div>
             </form>
 
-            <div class="dropdown ms-2">
-
-                <button class="button-contact btn btn-secondary dropdown-toggle bg-light text-dark mt-2" type="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Ma demande
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Partenariat</a></li>
-                    <li><a class="dropdown-item" href="#">Livraison</a></li>
-                    <li><a class="dropdown-item" href="#">Supper Doggy</a></li>
-                </ul>
+            <!-- div pour le menu "votre demande" (pas possible de le faire en dropdown sans JS, donc fait avec select et option) -->
+            <div class="ms-2">
+                <label class="ms-2">Votre demande</label>
+                <select class="form-select mt-2" aria-label="Votre demande">
+                    <option>Partenariat</option>
+                    <option>Livraison</option>
+                    <option>Supper Doggy</option>
+                </select>
             </div>
+
+
             <div class="mb-3 m-2">
                 <label for="exampleFormControlTextarea1" class="form-label m-2">Votre message</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
                     placeholder="Entrez votre message ici..."></textarea>
             </div>
             <div class="form-check d-flex justify-content-center">
-                <input class="form-check-input m-1" type="checkbox" value="" id="checkDefault">
-                <label class="form-check-label my-1" for="checkDefault">
-                    J'accepte de recevoir des offres commerciales et des informations sur les produits de Pop Pop
-                    Boutique
+                <div>
+                    <input class="form-check-input m-1" type="checkbox" value="" id="checkDefault">
+                    <label class="form-check-label my-1" for="checkDefault">
+                </div>
+                J'accepte de recevoir des offres commerciales et des informations sur les produits de Pop Pop
+                Boutique
                 </label>
             </div>
 
 
             <div class="pb-3 pt-2">
-                <button type="submit" class="btn btn-send d-flex mx-auto">Envoyer</button>
+                <button type="submit" class="btn btn-send d-flex mx-auto" data-bs-toggle="modal"
+                    data-bs-target="#btn-contact">Envoyer</button>
             </div>
         </div>
     </main>
 
+    <!-- Modal bouton envoyer contact -->
+    <div class="modal fade" id="btn-contact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Envoyé !</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Votre demande nous a bien été envoyée !
+                </div>
 
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer text-align=center d-flex pb-3 mt-auto">
 
